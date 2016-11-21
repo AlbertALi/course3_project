@@ -1,6 +1,12 @@
 # Coursera Data Specialization Course 3 Project
 data science specialization course 3 project
 
+
+## Important Note, running the script will download the zipped data sets, unzip it with "unzip" function to you working directory and use relative file references 
+
+## If you prefer use the data that you downloaded, feel free to change the file path.
+
+## The script does the following
 1.Download the data set and unzip it
 
 2.Load features (x) and activity labels (y) column names
