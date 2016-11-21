@@ -17,7 +17,8 @@ x_names <- feat$var_name %>%
         gsub("\\()", x = ., replacement = "") %>%
         gsub(",", x = ., replacement = ".") %>%
         gsub("^t", x = ., replacement = "Time.") %>%
-        gsub("^f", x = ., replacement = "Freq.")
+        gsub("^f", x = ., replacement = "Freq.") %>%
+        make.names()
 
 # read training and testing data and assign column names
 x_train <- read.table(file = "UCI HAR Dataset/train/X_train.txt", col.names = x_names)
@@ -37,10 +38,10 @@ subject_all <- bind_rows(subject_train, subject_test)
 # clean up x names and grep only key word mean and standard deviation
 target_cols <- x_names %>% 
                 grep(pattern = "mean|std", x = . ,ignore.case = T, value = T) %>%
-                grep(pattern = "^angle", x = ., invert = T)
+                grep(pattern = "^angle", x = ., invert = T, value = T)
 
 # subset x_all using the columns names
-x_target <- x_all %>% select(target_cols)
+x_target <- x_all %>% select_(target_cols)
 
 # join labels and y data
 y_target <- y_all %>% full_join(y_label, by = c("activity_num" = "label_num")) %>% setNames(c("activity.number", "activity.name"))
