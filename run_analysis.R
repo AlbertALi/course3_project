@@ -41,7 +41,7 @@ target_cols <- x_names %>%
                 grep(pattern = "^angle", x = ., invert = T, value = T)
 
 # subset x_all using the columns names
-x_target <- x_all %>% select_(target_cols)
+x_target <- x_all %>% .[,target_cols]
 
 # join labels and y data
 y_target <- y_all %>% full_join(y_label, by = c("activity_num" = "label_num")) %>% setNames(c("activity.number", "activity.name"))
