@@ -1,18 +1,18 @@
 # Code Book
 
 ## Description
-This code book decribe the components of the 2 tidy data sets in "tidy_data.txt" and "tidy_summary.txt".
+This code book decribe the components of the 2 tidy data sets in "tidy_data.txt" and "tidy_summary.txt".<br />
 The 2 data sets have same numbers of columns and same attributes.
 
 ## Activity
-Activity.number: 1 to 6
-Activity.name: 
-1 represents WALKING
-2 represents WALKING_UPSTAIRS
-3 represents WALKING_DOWNSTAIRS
-4 represents SITTING
-5 represents STANDING
-6 represents LAYING
+Activity.number: <br />1 to 6<br />
+Activity.name: <br />
+1 represents WALKING<br />
+2 represents WALKING_UPSTAIRS<br />
+3 represents WALKING_DOWNSTAIRS<br />
+4 represents SITTING<br />
+5 represents STANDING<br />
+6 represents LAYING<br />
 
 ## Subject
 "subject": 1 to 30
