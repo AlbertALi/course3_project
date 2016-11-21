@@ -53,8 +53,8 @@ tidy_data <- bind_cols(y_target, subject_all, x_target)
 tidy_data_summary <- tidy_data %>% group_by(activity.number, activity.name, subject) %>% summarise_all(mean)
 
 # finalize the beautiful codes, and save the data sets
-write.table(tidy_data, "tidy_data.txt")
-write.table(tidy_data_summary, "tidy_summary.txt")
+write.table(tidy_data, "tidy_data.txt", row.names = F)
+write.table(tidy_data_summary, "tidy_summary.txt", row.names = F)
 
 saveRDS(tidy_data, file = "tidy_data.Rds")
 saveRDS(tidy_data_summary, file = "tidy_summary.Rds")
